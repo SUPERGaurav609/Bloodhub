@@ -8,7 +8,7 @@ const BlogSections = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/blogs/'); 
+        const response = await fetch('https://gauravsuper.pythonanywhere.com/api/blogs/'); 
         const data = await response.json();
         setBlogs(data);
       } catch (error) {

@@ -11,8 +11,8 @@ import { GetData } from 'Services/FetchData';
 const BlogDetailsPage = () => {
   
   const id  = useParams();
-  const blog = GetData(`http://localhost:8000/api/blogs/${id.id}/`);
-  const blogs = GetData('http://localhost:8000/api/blogs/')
+  const blog = GetData(`https://gauravsuper.pythonanywhere.com/api/blogs/${id.id}/`);
+  const blogs = GetData('https://gauravsuper.pythonanywhere.com/api/blogs/')
   
   if (!blog) {
     return <div>Blog post not found</div>;
