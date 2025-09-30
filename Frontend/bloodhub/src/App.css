@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Jomhuria';
+  src: local('Jomhuria'), url('Fonts/Jomhuria/Jomhuria-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter'), url('Fonts/Inter/Inter-VariableFont_slnt\,wght.ttf') format('truetype');
+}
+
+:root{
+  --c-theme: #FFABAB;
+  --c-theme2: #D4E3FF;
+  --c-txt-head:#000000;
+  --c-txt-light:rgba(0,0,0,82%);
+  --c-txt-white:white;
+  --c-form-bg:#B3CDFF;
+  --box-shadow: 0px 1px 18px 3px #888888;
+  --transition: all 1.5s ease-in-out;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.blogBlockContainer div:hover{
+  background-color: var(--c-theme2);
+  
+  
+}
+
+

@@ -1,0 +1,32 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+  }
+  
+  .headContainer {
+    background-color: dark;
+  }
+  
+  .bodyContainer {
+    flex: 1;
+    overflow: auto;
+  }
+  
+.notification-msg{
+  transition: all .3s ease-in;
+  animation: slide-in alternate forwards .3s 1 ;
+}
+@keyframes slide-in {
+  from{
+    transform: translateY(-100%);
+  }to{
+    transform: translateY(0%);
+  }
+}
