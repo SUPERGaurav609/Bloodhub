@@ -14,7 +14,7 @@ const Popup = ({content,closePopup,setAssignedDonor,setBroadcast}) => {
 
     const {id} = useParams()
     const gettingBroadcast = async () => {
-        await fetch(`http://localhost:8000/api/BroadcastModel/${id}/`, {
+        await fetch(`https://gauravsuper.pythonanywhere.com/api/BroadcastModel/${id}/`, {
             credentials: 'include' 
         })
         .then(response => response.json())
@@ -123,7 +123,7 @@ export default function BroadcastDetail() {
 
     useEffect(()=>{
         const gettingBroadcast = async () => {
-            await fetch(`http://localhost:8000/api/BroadcastModel/${id}/`, {
+            await fetch(`https://gauravsuper.pythonanywhere.com/api/BroadcastModel/${id}/`, {
                 credentials: 'include' 
             })
             .then(response => response.json())

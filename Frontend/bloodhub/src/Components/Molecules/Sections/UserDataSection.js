@@ -7,8 +7,8 @@ import User from "Assets/images/target-user.png"
 import { GetData } from 'Services/FetchData';
 
 export default function UserDataSection() {
-    const donor = GetData('http://localhost:8000/api/donor/')
-    const seeker = GetData('http://localhost:8000/api/seeker/')
+    const donor = GetData('https://gauravsuper.pythonanywhere.com/api/donor/')
+    const seeker = GetData('https://gauravsuper.pythonanywhere.com/api/seeker/')
     
   return (
     <div>

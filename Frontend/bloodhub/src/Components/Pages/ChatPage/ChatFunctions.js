@@ -26,7 +26,7 @@ export async function  getChatBase(chat_ids) {
 async function gettingChatBase(id){
     console.log("fetching Chat`");
     try {
-      const response = await fetch(`http://localhost:8000/api/ChatBase/${id}/`, {
+      const response = await fetch(`https://gauravsuper.pythonanywhere.com/api/ChatBase/${id}/`, {
         credentials: 'include'
       });
 

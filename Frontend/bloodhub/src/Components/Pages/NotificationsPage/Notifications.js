@@ -12,7 +12,7 @@ export default function Notifications() {
   const gettingNotifications = async (id) => {
     console.log("fetching Data");
     try {
-      const response = await fetch(`http://localhost:8000/api/Notifications/${id}/`, {
+      const response = await fetch(`https://gauravsuper.pythonanywhere.com/api/Notifications/${id}/`, {
         credentials: 'include'
       });
 
@@ -65,7 +65,7 @@ export default function Notifications() {
       userId:user.emailId,
       userType:user.type
     }
-    const response = await fetch("http://localhost:8000/api/remove_notification/",{
+    const response = await fetch("https://gauravsuper.pythonanywhere.com/api/remove_notification/",{
       method:"POST",
       credentials: 'include',
       headers: {
@@ -103,7 +103,7 @@ export default function Notifications() {
 
       if (data.status === 'success') {
           console.log("Updated Successfully ")
-          patchModel({'status':accept?"Accepted":"Deny"},`http://localhost:8000/api/Notifications/${N_id}/`).then((data)=>{
+          patchModel({'status':accept?"Accepted":"Deny"},`https://gauravsuper.pythonanywhere.com/api/Notifications/${N_id}/`).then((data)=>{
             if(data){
               console.log("Notification Updated successfully")
               const newData = Notification.filter(e=>e.id!==N_id)
@@ -114,7 +114,7 @@ export default function Notifications() {
       } else {
           console.log("not done", data);
           if(data.error === "Broadcast not found"){
-            patchModel({'status':accept?"Accepted":"Deny"},`http://localhost:8000/api/Notifications/${N_id}/`).then((data)=>{
+            patchModel({'status':accept?"Accepted":"Deny"},`https://gauravsuper.pythonanywhere.com/api/Notifications/${N_id}/`).then((data)=>{
               if(data){
                 console.log("denied invalid notification ")
                 const newData = Notification.filter(e=>e.id!==N_id)

@@ -85,7 +85,7 @@ export default function Chat() {
       let chatBaseStreamData = null
       if(user.uId){
           const encodedName = encodeURIComponent(user.uId);//DOash@gmail.com+SEmaddy@gmail.com type fo name 
-          chatBaseStreamData = new EventSource(`http://localhost:8000/api/stream_ChatBases/${encodedName}/`);
+          chatBaseStreamData = new EventSource(`https://gauravsuper.pythonanywhere.com/api/stream_ChatBases/${encodedName}/`);
           console.log("Streamed Data " ,chatBaseStreamData)
           chatBaseStreamData.onmessage = (event) => {
 

@@ -8,7 +8,7 @@ function BroadcastTable() {
     const navigate = useNavigate();
     useEffect(() => {
         const gettingBroadcast = async () => {
-            await fetch(`http://localhost:8000/api/get_broadcastList/${user.id}/`, {
+            await fetch(`https://gauravsuper.pythonanywhere.com/api/get_broadcastList/${user.id}/`, {
                 credentials: 'include' 
             })
             .then(response => response.json())
@@ -17,7 +17,7 @@ function BroadcastTable() {
         }
         gettingBroadcast()
     }, [user.id]);
-    //const broadcastList = GetData(`http://localhost:8000/api/get_broadcastList/${user.id}/`)
+    //const broadcastList = GetData(`https://gauravsuper.pythonanywhere.com/api/get_broadcastList/${user.id}/`)
 
     const getFormatedDate=(date)=>{
         const date_time = parseISO(date);

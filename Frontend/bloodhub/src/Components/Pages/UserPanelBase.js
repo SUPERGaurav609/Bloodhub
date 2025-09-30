@@ -28,10 +28,10 @@ export default function UserPanelBase() {
     const [token, setToken] = useState(null);
     const [ignore,setIgnore] = useState(false);
     const [notificationPermission, setNotificationPermission] = useState(null);
-    const BloodBanks = GetData(`http://localhost:8000/api/BloodBank/`)
-    const BloodDrives = GetData(`http://localhost:8000/api/BloodDrive/`)
-    const Donors = GetData("http://localhost:8000/api/donor/");
-    const Seeker = GetData("http://localhost:8000/api/seeker/");
+    const BloodBanks = GetData(`https://gauravsuper.pythonanywhere.com/api/BloodBank/`)
+    const BloodDrives = GetData(`https://gauravsuper.pythonanywhere.com/api/BloodDrive/`)
+    const Donors = GetData("https://gauravsuper.pythonanywhere.com/api/donor/");
+    const Seeker = GetData("https://gauravsuper.pythonanywhere.com/api/seeker/");
     useEffect(() => {
         fetchUser().then((user)=>{
             if(user){
@@ -67,7 +67,7 @@ export default function UserPanelBase() {
             console.log("Device Token : " , token)
             setToken(token);
             // Send the token to your Django backend
-            fetch('http://localhost:8000/api/save_token/', {
+            fetch('https://gauravsuper.pythonanywhere.com/api/save_token/', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',

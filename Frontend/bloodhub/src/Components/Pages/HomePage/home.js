@@ -31,7 +31,7 @@ export default function Home() {
     const [isRegistered,setIsRegistered] = useState(false);
     const [failedRegMsg, setFailedRegMsg] = useState(<></>);
     const [isScrolled, setIsScrolled] = useState(false);
-    const blogs = GetData("http://localhost:8000/api/blogs/");
+    const blogs = GetData("https://gauravsuper.pythonanywhere.com/api/blogs/");
     
     useEffect(() => {
 

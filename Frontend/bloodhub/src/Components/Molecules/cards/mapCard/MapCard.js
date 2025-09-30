@@ -212,7 +212,7 @@ export default function MapCard({ className,style,height,mapFunction=false }) {
     searchBox?setSearchBox(false):setSearchBox(true);
   }
 
-  //setBloodBank(GetData(`http://localhost:8000/api/BloodBank/`))
+  //setBloodBank(GetData(`https://gauravsuper.pythonanywhere.com/api/BloodBank/`))
   console.log(BloodBanks)
   return (
 

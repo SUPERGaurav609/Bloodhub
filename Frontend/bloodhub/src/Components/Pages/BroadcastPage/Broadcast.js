@@ -28,7 +28,7 @@ export default function Broadcast() {
       const fetchLastBroadcast = async () => {
         console.log("fetching Data");
         try {
-          const response = await fetch(`http://localhost:8000/api/BroadcastModel/${lastBroadcastId}/`, {
+          const response = await fetch(`https://gauravsuper.pythonanywhere.com/api/BroadcastModel/${lastBroadcastId}/`, {
             credentials: 'include'
           });
   
@@ -94,7 +94,7 @@ export default function Broadcast() {
   
   /* const sendNotification = async () => {
     const message="This is message",title="Bloodhub"
-    fetch('http://localhost:8000/api/send_notification/', {
+    fetch('https://gauravsuper.pythonanywhere.com/api/send_notification/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -118,7 +118,7 @@ export default function Broadcast() {
     }
 
     try {
-        const response = await fetch('http://localhost:8000/api/broadcast_notification/', {
+        const response = await fetch('https://gauravsuper.pythonanywhere.com/api/broadcast_notification/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

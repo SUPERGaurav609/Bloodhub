@@ -11,8 +11,8 @@ import UserDetail from 'Components/Molecules/Sections/UserDetail';
 
 export default function UserPanelHome() {
     const {user} = useOutletContext();
-    const blogs = GetData("http://localhost:8000/api/blogs/");
-    const sliderImages = GetData("http://localhost:8000/api/Slider/");
+    const blogs = GetData("https://gauravsuper.pythonanywhere.com/api/blogs/");
+    const sliderImages = GetData("https://gauravsuper.pythonanywhere.com/api/Slider/");
 
   return (
     <>

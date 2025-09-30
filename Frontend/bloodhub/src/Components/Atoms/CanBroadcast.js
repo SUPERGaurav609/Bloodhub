@@ -14,7 +14,7 @@ function CanBroadcast({seeker}) {
           const fetchLastBroadcast = async () => {
             console.log("fetching Data");
             try {
-              const response = await fetch(`http://localhost:8000/api/BroadcastModel/${lastBroadcastId}/`, {
+              const response = await fetch(`https://gauravsuper.pythonanywhere.com/api/BroadcastModel/${lastBroadcastId}/`, {
                 credentials: 'include'
               });
       
